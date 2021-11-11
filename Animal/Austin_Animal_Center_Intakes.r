@@ -5,13 +5,24 @@ setwd('D:/work3')
 library(ggplot2)
 library(cowplot)
 library(tidyverse)
+library(dlookr)
+library(dplyr)
+library(DataExplorer)
+DataExplorer::create_report(animal)
+
+
 
 # load the data that we are to use here 
 animal <- read.csv("D:/work3/Animal/Austin_Animal_Center_Intakes.csv",stringsAsFactors = FALSE)
 head(animal)
+view(animal)
 
 # summary of the data 
 summary(animal)
+
+dim(animal)
+glimpse(animal)
+
 
 # check missing Data 
 sum(is.na(animal))
