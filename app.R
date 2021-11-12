@@ -2,24 +2,14 @@ library(shiny)
 
 # ui object
 
-# ui object
 ui <- fluidPage(
-  titlePanel(p("Spatial app", style = "color:#3474A7")),
+  titlePanel("title"),
   sidebarLayout(
-    sidebarPanel(
-      p("Made with", a("Shiny",
-                       href = "http://shiny.rstudio.com"
-      ), "."),
-      img(
-        src = "imageShiny.png",
-        width = "70px", height = "70px"
-      )
-    ),
+    sidebarPanel("sidebar panel for inputs"),
     mainPanel("main panel for outputs")
   )
 )
 
-# server()
 # server()
 server <- function(input, output){ }
 
